@@ -7,4 +7,14 @@
 
 ## 4. components目录下,Component组件
 
-## 5. 
+## 5. 页面跳转
+方式1：`<Link>`  <br>
+
+```
+import Link from 'next/link'
+<Link href='/'><a>返回首页</a></Link>
+```
+方式2：js编程的方式 
+```
+Router.push('/smartHuiA')
+```
