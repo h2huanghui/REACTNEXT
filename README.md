@@ -79,3 +79,70 @@ export default Header
 ```
 
 定义全局的 `<Head>`
+components文件夹下,建立myheader.js
+```
+import Head from 'next/head'
+
+const MyHeader = () => {
+    return (
+        <div>
+            <Head>
+                <title>smartHui.com</title>
+            </Head>
+        </div>
+    )
+}
+
+export default MyHeader
+```
+pages里面引入即可
+```
+import MyHeader from '../components/myheader'
+<MyHeader />
+
+```
+
+## 12. Next.js中引入antd
+首先要让Next.js支持css引入,安装插件
+`npm i --save @zeit/next-css`<br>
+
+其次建立next.config.js
+```
+const withCss = require('@zeit/next-css')
+
+if (typeof require !== 'undefined') {
+    require.extensions['.css'] = file => { }
+}
+
+module.exports = withCss({})
+
+```
+重启即可
+
+按需加载Ant Design <br>
+
+安装antd `npm i --save antd` <br>
+
+安装按需加载插件 `npm i --save babel-plugin-import`
+
+建立.babelrc文件
+```
+{
+    "presets": ["next/babel"], //继承next.js配置
+    "plugins": [ //新增插件,这个插件就是让antd可以按需引入,包括CSS
+        [
+            "import", //按需引入
+            {
+                "libraryName":"antd",
+                "style":"css"
+            }
+        ]
+    ]
+}
+```
+引入Button`import { Button } from 'antd'` <br>
+            
+`<Button>Btn</Button>`
+
+重启即可
+

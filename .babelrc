@@ -1,0 +1,12 @@
+{
+    "presets": ["next/babel"], //继承next.js配置
+    "plugins": [ //新增插件,这个插件就是让antd可以按需引入,包括CSS
+        [
+            "import", //按需引入
+            {
+                "libraryName":"antd",
+                "style":"css"
+            }
+        ]
+    ]
+}

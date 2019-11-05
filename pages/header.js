@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import '../static/test.css'
+import { Button } from 'antd'
 
 function Header() {
     return (
@@ -9,6 +11,7 @@ function Header() {
                 <meta charSet='utf-8'/>
             </Head>
             <div>SmartHui.com</div>
+            <Button>Btn</Button>
         </div>
         
     )
