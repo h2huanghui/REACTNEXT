@@ -4,8 +4,8 @@
         [
             "import", //按需引入
             {
-                "libraryName":"antd",
-                "style":"css"
+                "libraryName":"antd"
+                // "style":"css"
             }
         ]
     ]

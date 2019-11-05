@@ -146,3 +146,13 @@ module.exports = withCss({})
 
 重启即可
 
+## 13. Next.js中打包注意事项
+由于引入了antd样式,所以直接打包会报错。所以通过引入全局样式来解决这个打包问题
+pages目录下,建立_app.js文件
+```
+import App from 'next/app'
+import 'antd/dist/antd.css'
+
+export default App
+```
+
