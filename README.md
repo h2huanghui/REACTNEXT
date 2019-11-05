@@ -33,3 +33,14 @@ hashChangeComplete hash跳转完成时
 ```
 
 ## 8. getInitialProps获取远端数据
+
+## 9. style JSX
+```
+    <style jsx>
+        {`
+            div {
+                color:${color}
+            }
+        `}
+    </style>
+```
