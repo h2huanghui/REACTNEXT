@@ -44,3 +44,15 @@ hashChangeComplete hash跳转完成时
         `}
     </style>
 ```
+
+## 10. 模块加载LazyLoading (moment.js)
+```
+ const changeTime = async () => { //把方法变成异步模式
+    const moment = await import('moment') //等待moment加载完成
+    setTime(moment.default(Date.now()).format())  //注意使用default
+}
+```
+自定义组件懒加载
+```
+const One = dynamic(import('../components/one'))
+```
