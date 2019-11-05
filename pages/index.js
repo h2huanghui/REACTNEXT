@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Router from 'next/router'
+import MyHeader from '../components/myheader'
 
 /* const Home = () => (
     <div>
@@ -51,6 +52,7 @@ const Home = () => {
 
     return (
         <div>
+            <MyHeader />
             <div>我是首页</div>
             <div>
                 <Link href={{ pathname: '/plan', query: {name:'react'}}}><a>学习React</a></Link>

@@ -56,3 +56,26 @@ hashChangeComplete hash跳转完成时
 ```
 const One = dynamic(import('../components/one'))
 ```
+
+## 11. 自定义<Head> (更加友好的SEO操作)
+在每个页面加一个<Head>标签
+```
+import Head from 'next/head'
+
+function Header() {
+    return (
+        <div>
+            {/* 在每个页面上加上Head标签 */}
+            <Head>
+                <title>hui的blog</title>
+                <meta charSet='utf-8'/>
+            </Head>
+            <div>SmartHui.com</div>
+        </div>
+    )
+}
+
+export default Header
+```
+
+定义全局的 `<Head>`
