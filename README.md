@@ -27,4 +27,9 @@ withRouter接收router
 routeChangeStart 路由发生变化时
 routeChangeComplete 路由结束变化时
 beforeHistoryChange 浏览器history触发前
+routeChangeError 跳转发生错误
+hashChangeStart  hash跳转开始执行
+hashChangeComplete hash跳转完成时
 ```
+
+## 8. getInitialProps获取远端数据
